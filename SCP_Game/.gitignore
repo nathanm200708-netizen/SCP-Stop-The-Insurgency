@@ -1,0 +1,7 @@
+# GameMaker Build and Cache directories
+/.yy/
+/cache/
+/options/main/inherited/
+
+# Local User Settings (window layouts, recent files)
+/local_settings.json
