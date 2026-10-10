@@ -1,6 +1,9 @@
 current_entrant = instance_find(obj_unit_parent, 0);
 feedback_message = "";
 show_manual = false; // Toggle with TAB or F
+// Sub-menu state
+interrogation_mode = false;  // false = standard 1-2-3; true = dynamic questions
+selected_dynamic_q = 0;      // highlight cursor index
 
 // Predetermined rules/classifiers known to the inspector
 inspector_guide = {
