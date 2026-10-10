@@ -16,6 +16,6 @@ draw_set_font(title);
 /// @DnDVersion : 1
 /// @DnDHash : 520001BC
 /// @DnDArgument : "x" "690"
-/// @DnDArgument : "y" "200"
-/// @DnDArgument : "caption" ""Papers Please SCP Version""
-draw_text(690, 200, string("Papers Please SCP Version") + "");
+/// @DnDArgument : "y" "150"
+/// @DnDArgument : "caption" ""SCP: Stop The Insurgency""
+draw_text(690, 150, string("SCP: Stop The Insurgency") + "");
