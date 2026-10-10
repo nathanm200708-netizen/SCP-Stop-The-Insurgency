@@ -1,4 +1,9 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"Obj_Checkpoint_Manager","order":4,"path":"objects/Obj_Checkpoint_Manager/Obj_Checkpoint_Manager.yy",},
+    {"name":"Obj_Human_Child","order":2,"path":"objects/Obj_Human_Child/Obj_Human_Child.yy",},
+    {"name":"Obj_Monster_Child","order":3,"path":"objects/Obj_Monster_Child/Obj_Monster_Child.yy",},
+    {"name":"obj_unit_parent","order":1,"path":"objects/obj_unit_parent/obj_unit_parent.yy",},
+  ],
 }
