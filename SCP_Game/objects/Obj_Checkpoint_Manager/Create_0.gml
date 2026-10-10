@@ -15,3 +15,7 @@ inspector_guide = {
         "- Monsters slip up when asked about food or sunlight."
     ]
 };
+// Confrontation tracking
+can_press_current = false;
+active_confront_label = "";
+active_confront_reply = "";
