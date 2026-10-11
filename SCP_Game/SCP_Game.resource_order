@@ -1,4 +1,11 @@
 {
-  "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"rooms","order":6,"path":"folders/rooms.yy",},
+    {"name":"Objects","order":5,"path":"folders/Objects.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"Obj_Human_Child","order":1,"path":"objects/Obj_Human_Child/Obj_Human_Child.yy",},
+    {"name":"Obj_Monster_Child","order":2,"path":"objects/Obj_Monster_Child/Obj_Monster_Child.yy",},
+    {"name":"obj_unit_parent","order":3,"path":"objects/obj_unit_parent/obj_unit_parent.yy",},
+  ],
 }
