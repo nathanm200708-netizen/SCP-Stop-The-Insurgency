@@ -9,8 +9,8 @@
   "name":"obj_unit_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"SCP_Game",
-    "path":"SCP_Game.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
