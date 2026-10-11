@@ -49,15 +49,42 @@ inspector_guide = {
 };
 
 // Spawner coordinates and timer
-entrant_spawn_x = 576;
-entrant_spawn_y = 384;
+entrant_spawn_x = 550;
+entrant_spawn_y = 120;
 spawn_timer = 0;
 
 // Spawning function
 spawn_next_entrant = function() {
     var entrant_type = choose(Obj_Human_Child, Obj_Monster_Child);
-    current_entrant = instance_create_layer(entrant_spawn_x, entrant_spawn_y, "Instances", entrant_type);
+   current_entrant = instance_create_layer(
+        entrant_spawn_x,
+        entrant_spawn_y,
+        "Instances",
+        entrant_type
+    );
+	
+	current_entrant.depth = -1000;
+current_entrant.sprite_index = choose(
+    sScpScientistFemaleAngry,
+    sScpScientistFemaleNervous,
+	sScpScientistFemaleNeutral,
+	sScpScientistAnger,
+	sScpScientistNervous,
+	sScpScientistNetural
+);
+current_entrant.visible = false;
 
+current_entrant.image_xscale = 1;
+current_entrant.image_yscale = 1;
+current_entrant.image_alpha = 1;
+current_entrant.visible = true;
+show_debug_message("X: " + string(current_entrant.x));
+show_debug_message("Y: " + string(current_entrant.y));
+show_debug_message("Visible: " + string(current_entrant.visible));
+show_debug_message("Sprite: " + sprite_get_name(current_entrant.sprite_index));
+show_debug_message("Sprite assigned: " + sprite_get_name(current_entrant.sprite_index));
+// Choose a new sprite for each spawned character
+   
     interrogation_mode = false;
     log_mode = false;
     statement_log = [];
@@ -69,3 +96,5 @@ spawn_next_entrant = function() {
 // Start the loop
 current_entrant = noone;
 spawn_next_entrant();
+randomize();
+

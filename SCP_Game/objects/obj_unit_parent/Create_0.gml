@@ -1,5 +1,6 @@
 is_monster = false;
 
+
 dialogue = {
     greeting: "Hello, inspector.",
     origin: "Sector 1",

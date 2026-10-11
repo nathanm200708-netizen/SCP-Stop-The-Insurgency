@@ -1,11 +1,18 @@
+// Reset GUI text settings
+draw_set_font(-1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+draw_set_alpha(1);
 // 1. Spoken Dialogue Window
 draw_set_color(c_black);
-draw_rectangle(60, 380, 700, 490, false);
+// draw_rectangle(60, 380, 700, 490, false);
+draw_sprite_stretched(Sprite11, 0, 360, 520, 620, 170);
 draw_set_color(c_white);
-draw_rectangle(60, 380, 700, 490, true);
+
 
 if (instance_exists(current_entrant)) {
-    draw_text_ext(80, 395, "\"" + current_entrant.current_speech + "\"", 20, 600);
+    draw_text_ext(25, 360, "\"" + current_entrant.current_speech + "\"", 20, 600);
 } else {
     draw_text(80, 425, feedback_message);
 }
@@ -49,14 +56,14 @@ if (instance_exists(current_entrant)) {
     } else if (interrogation_mode) {
         // Deep Interrogation Topics List
         draw_set_color(c_aqua);
-        draw_text(60, 500, "--- DEEP INTERROGATION (W/S to Scroll, Enter to Ask, Q to Return) ---");
+        draw_text(350, 150, "--- DEEP INTERROGATION (W/S to Scroll, Enter to Ask, Q to Return) ---");
 
         var inquiries = current_entrant.dynamic_inquiries;
         for (var k = 0; k < array_length(inquiries); k++) {
             var is_sel = (k == selected_dynamic_q);
             draw_set_color(is_sel ? c_yellow : c_ltgray);
             var prefix = is_sel ? "> " : "  ";
-            draw_text(60 + (k * 220), 525, prefix + inquiries[k].label);
+            draw_text(60 + (k * 220), 300, prefix + inquiries[k].label);
         }
     }
 }
@@ -64,19 +71,20 @@ if (instance_exists(current_entrant)) {
 // 3. Navigation Controls Bar
 draw_set_color(c_yellow);
 if (log_mode) {
-    draw_text(60, 555, "[W/S] Navigate  |  [Space] Select Claim  |  [E] CONFRONT PAIR  |  [C] EXIT LOG");
+    draw_text(300, 720, "[W/S] Navigate  |  [Space] Select Claim  |  [E] CONFRONT PAIR  |  [C] EXIT LOG");
 } else if (interrogation_mode) {
-    draw_text(60, 555, "[W/S] Choose Question  |  [Enter/Space] Ask  |  [Q] Return to Protocol");
+    draw_text(350, 200, "[W/S] Choose Question  |  [Enter/Space] Ask  |  [Q] Return to Protocol");
 } else {
-    draw_text(60, 520, "[1,2,3] Protocol Qs  |  [Q] Deep Interrogation  |  [C] Open Log (" + string(array_length(statement_log)) + ")");
+    draw_text(370, 535,
+"[1,2,3] Protocol Qs  |  [Q] Deep Interrogation  |  [C] Open Log(" + string(array_length(statement_log)) + ")");
 }
-
-draw_set_color(c_gray);
-draw_text(60, 580, "[TAB] Field Guide");
+//670
+draw_set_color(c_white);
+draw_text(600, 620, "[TAB] Field Guide");
 draw_set_color(c_lime);
-draw_text(220, 580, "[A] APPROVE");
+draw_text(540, 650, "[A] APPROVE");
 draw_set_color(c_red);
-draw_text(350, 580, "[D] DENY");
+draw_text(800, 650, "[D] DENY");
 
 // 4. Field Guide Overlay (Renders on right side of screen)
 if (show_manual) {
@@ -100,4 +108,24 @@ if (show_manual) {
     for (var j = 0; j < array_length(inspector_guide.monster_clues); j++) {
         draw_text_ext(740, 280 + (j * 55), inspector_guide.monster_clues[j], 16, 220);
     }
+}
+// Draw the current character
+// Draw the current character
+/*
+if (instance_exists(current_entrant)) {
+
+    draw_set_color(c_white);
+    draw_set_alpha(1);
+
+    draw_sprite_ext(
+        current_entrant.sprite_index,
+        0,
+        550,
+        200,
+        0.5,
+        0.5,
+        0,
+        c_white,
+        1
+    );
 }
