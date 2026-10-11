@@ -17,8 +17,8 @@ draw_set_font(contrls_font);
 /// @DnDHash : 12F7B2BB
 /// @DnDArgument : "x" "690"
 /// @DnDArgument : "y" "700"
-/// @DnDArgument : "caption" ""These are the controls for the game""
-draw_text(690, 700, string("These are the controls for the game") + "");
+/// @DnDArgument : "caption" ""Find the insurgents and stop them from entering""
+draw_text(690, 700, string("Find the insurgents and stop them from entering") + "");
 
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1

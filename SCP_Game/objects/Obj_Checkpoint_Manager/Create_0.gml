@@ -42,9 +42,9 @@ inspector_guide = {
     valid_sectors: ["Sector 1", "Sector 2", "Sector 3", "Sector 4"],
     valid_purposes: ["Work transit", "Family visit", "Medical treatment"],
     monster_clues: [
-        "- Monsters cannot state a valid sector (Sector 5+ do not exist).",
-        "- Monsters claim travel for 'Hunting' or 'Leisure'.",
-        "- Monsters slip up when asked about food or sunlight."
+        "- Insurgents cannot state a valid sector (Sector 5+ do not exist).",
+        "\n- Insurgents claim travel for 'Hunting' or 'Leisure'.",
+        "\n- Insurgents slip up when asked about food or sunlight."
     ]
 };
 

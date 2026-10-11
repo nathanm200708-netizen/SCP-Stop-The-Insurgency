@@ -104,7 +104,7 @@ if (show_manual) {
     draw_text(740, 180, "VALID PURPOSES:");
     draw_text(740, 200, "Work, Family, Medical");
 
-    draw_text(740, 250, "MONSTER TELLTALES:");
+    draw_text(740, 250, "Insurgent TELLTALES:");
     for (var j = 0; j < array_length(inspector_guide.monster_clues); j++) {
         draw_text_ext(740, 280 + (j * 55), inspector_guide.monster_clues[j], 16, 220);
     }

@@ -101,13 +101,13 @@ if (instance_exists(current_entrant)) {
 
     // --- Stamp Decisions ---
     if (keyboard_check_pressed(ord("A"))) {
-        feedback_message = current_entrant.is_monster ? "VIOLATION: Monster admitted!" : "APPROVED: Citizen cleared.";
+        feedback_message = current_entrant.is_monster ? "VIOLATION: Insurgent admitted!" : "APPROVED: Personnel cleared.";
         instance_destroy(current_entrant);
         current_entrant = noone;
         spawn_timer = 90;
     }
     else if (keyboard_check_pressed(ord("D"))) {
-        feedback_message = current_entrant.is_monster ? "CORRECT: Monster apprehended!" : "PENALTY: Lawful citizen denied!";
+        feedback_message = current_entrant.is_monster ? "CORRECT: Insurgent apprehended!" : "PENALTY: Lawful Perssonel denied!";
         instance_destroy(current_entrant);
         current_entrant = noone;
         spawn_timer = 90;
